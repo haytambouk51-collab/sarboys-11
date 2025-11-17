@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محاكاة: شكرا لانتضارك! (مصحح)</title>
+    
+    <style>
+        /* التنسيق الأساسي للموقع "العادي" */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding: 50px;
+            text-align: center;
+            transition: background-color 1s;
+        }
+        
+        /* تنسيق الاختراق */
+        .hacked-style {
+            background-color: black !important;
+            color: lime !important;
+            font-family: 'Courier New', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* التأكد من ملء الشاشة عمودياً */
+            margin: 0;
+            flex-direction: column;
+            text-shadow: 0 0 10px lime;
+            padding: 20px;
+        }
+        .hacked-style h1 {
+            font-size: 4em;
+            border-bottom: 2px solid lime;
+            padding-bottom: 10px;
+        }
+        .hacked-style p {
+            font-size: 1.5em;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div id="main-content">
+        <h1>مرحباً بكم في موقع Sar Boys الرسمي</h1>
+        <p>هذه هي الصفحة الرئيسية للموقع.</p>
+        <p style="color: red; font-weight: bold;">انتظر لحظة...</p>
+    </div>
+
+    <script>
+        // تحديد الفترة الزمنية قبل "الاختراق" بالمللي ثانية (مثال: 2000 مللي ثانية = ثانيتان)
+        const delayTime = 2000; 
+
+        // دالة يتم تشغيلها لبدء محاكاة الاختراق
+        function simulateHacking() {
+            
+            // 1. مسح المحتوى القديم تماماً
+            document.getElementById('main-content').remove();
+            
+            // 2. تطبيق تنسيق الاختراق على جسم الصفحة
+            document.body.className = 'hacked-style';
+            document.body.style.padding = '0'; // إزالة الـ padding القديم
+
+            // 3. إضافة محتوى "الاختراق" الجديد بشكل كامل
+            document.body.innerHTML += `
+                <div>
+                    <h1>🔴 شكرا لانتضارك! 🔴</h1>
+                    <p>رسالة من فاعل الخير التوضيحي:</p>
+                    <p>>> شاهدوا هدا الفيديو الراىع.</p>
+                    <p>>> https://grabify.link/13XMR9!</p>
+                </div>
+            `;
+            
+            // 4. لجعل الشاشة سوداء بالكامل على الفور (إذا كان التأثير غير مرئي)
+            document.body.style.backgroundColor = 'black'; 
+        }
+
+        // تشغيل دالة المحاكاة بعد فترة تأخير محددة
+        setTimeout(simulateHacking, delayTime);
+    </script>
+
+</body>
+</html>
